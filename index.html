@@ -76,6 +76,59 @@
                 </div>
             </nav>
             <div id="content" class="container">
+                <!-- TABELA -->
+                <div class="table-title">
+                    <h3>Usuários</h3>
+                    <input type="text" class="form-control form-field son-form-field" placeholder="Pesquisar" />
+                </div>
+                <table class="table bg-white">
+                    <thead>
+                        <tr>
+                            <th class="table-col-title">#</th>
+                            <th class="table-col-title">NOME</th>
+                            <th class="table-col-title">SOBRENOME</th>
+                            <th class="table-col-title">USUÁRIO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Railton</td>
+                            <td>Leal</td>
+                            <td>@leal98</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Railton</td>
+                            <td>Leal</td>
+                            <td>@leal98</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Railton</td>
+                            <td>Leal</td>
+                            <td>@leal98</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Railton</td>
+                            <td>Leal</td>
+                            <td>@leal98</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Railton</td>
+                            <td>Leal</td>
+                            <td>@leal98</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Railton</td>
+                            <td>Leal</td>
+                            <td>@leal98</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <!-- FORMULÁRIO -->
                 <h3 id="main-page-form-title" class="son-main-text-3">Novo Artigo</h3>
                 <div>
@@ -109,8 +162,13 @@
                             <button class="btn btn-primary">Criar e adicionar outro</button>
                             <button class="btn btn-primary">Publicar post</button>
                         </div>
-
                     </form>
+                </div>
+                <h3 id="vendas-h3">Vendas</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="relatorio"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,6 +183,24 @@
             event.preventDefault();
 
             $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script src="./js/chart/Chart.min.js"></script>
+    <script>
+        const contexto = document.getElementById('relatorio').getContext('2d');
+        const grafico = new Chart(contexto, {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+                datasets: [
+                    {
+                        label: 'Vendas no ano',
+                        backgroundColor: '#5898d9ff',
+                        borderColor: '#5898d9ff',
+                        data: [11, 2, 18, 8, 4, 19, 15]
+                    }
+                ]
+            }
         });
     </script>
 </body>

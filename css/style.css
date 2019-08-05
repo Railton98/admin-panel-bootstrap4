@@ -139,6 +139,7 @@ body {
     height: 64px;
     color: #fff;
     padding-top: 14px;
+    cursor: pointer;
 }
 
 #menu-toggle img {
@@ -186,4 +187,40 @@ body {
 
 .confirm-btns button:hover {
     background-color: #2b74bfff;
+}
+
+.table {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px rgba(164, 164, 164, 0.3);
+}
+
+.table thead {
+    background-color: #f7f6fb;
+}
+
+.table-col-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: #78997d;
+}
+
+.table tbody {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #78997d;
+}
+
+.table-title {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.table-title input{
+    width: 30%;
+}
+
+#vendas-h3 {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
