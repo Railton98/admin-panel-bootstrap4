@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <img src="./logo.png" alt="Toggle">
+                <span>Painel da SON</span>
+            </div>
+            <div class="list-group list-group-flush border-right">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-home"></i>Início
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-users"></i>Funcionários
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-box-open"></i>Produtos
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-sitemap"></i>Categorias
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-people-carry"></i>Fornecedores
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-chart-bar"></i>Relatórios
+                </a>
+            </div>
+        </div>
+        <!-- Conteúdo -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light" id="son-navbar">
+                <span id="menu-toggle" class="mr-auto">
+                    <img src="./logo.png" alt="Toggle" class="mx-auto d-block">
+                </span>
+                <a id="navbar-site-title" href="#" class="navbar-brand">Painel</a>
+
+                <button 
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#son-navbar-collapse"
+                    aria-controls="son-navbar-collapse"
+                    aria-expanded="false"
+                    aria-label="Exibe toda NavBar"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="son-navbar-collapse">
+                    <form id="navbar-search-form" class="form-inline">
+                        <input
+                            id="navbar-search-field"
+                            type="text"
+                            class="form-control form-field son-form-field"
+                            placeholder="Pesquisar"
+                        />
+                    </form>
+
+                    <div id="navbar-profile" class="ml-auto">
+                        <img src="https://lh3.googleusercontent.com/-NsE8rHU_xSc/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reT0eVoFaALsKiqaSfJM_cBkpBZeg/photo.jpg?sz=46" alt="">
+                        <span>Railton Leal</span>
+                    </div>
+                </div>
+            </nav>
+            <div id="content" class="container">
+                <!-- FORMULÁRIO -->
+                <h3 id="main-page-form-title" class="son-main-text-3">Novo Artigo</h3>
+                <div>
+                    <form class="card son-form">
+                        <div class="card-body son-form-body">
+                            <div class="form-group">
+                                <label for="author">Autor</label>
+                                <input type="text" name="author" id="author" class="form-field son-form-field form-control" placeholder="Autor">
+                                <hr>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="title">Título</label>
+                                <input type="text" name="title" id="title" class="form-field son-form-field form-control" placeholder="Título">
+                                <hr>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="body">Conteúdo</label>
+                                <textarea id="body" class="form-field son-form-field form-control" placeholder="Um texto qualquer..."></textarea>
+                                <hr>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="date">Data</label>
+                                <input type="date" name="date" id="date" class="form-field son-form-field form-control">
+                            </div>
+                        </div>
+
+                        <div class="confirm-btns card-footer">
+                            <button class="btn btn-primary">Criar e adicionar outro</button>
+                            <button class="btn btn-primary">Publicar post</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $("#menu-toggle").click(event => {
+            event.preventDefault();
+
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>
